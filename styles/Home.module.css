@@ -7,8 +7,6 @@
   background: linear-gradient(45deg, #615dee , #f026ee );
 }
 
-/* Headline */
-
 .headline {
   display: flex;
   justify-content: space-between;
@@ -53,7 +51,6 @@
   
 }
 
-/* Hero */
 
 .hero {
   display: flex;
@@ -107,7 +104,6 @@
 }
 
 
-/* CardPart */
 
 .card {
   display: flex;
@@ -135,7 +131,6 @@
 
 }
 
-/* Footer */
 
 .footer {
   display: flex;

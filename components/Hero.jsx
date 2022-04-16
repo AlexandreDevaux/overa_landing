@@ -6,8 +6,8 @@ const Hero = () => {
   return (
       <div className={styles.hero}>
           <div className={styles.heroText}>
-              <div className={styles.heroTextTitle}>N&apos;ACHETEZ QUE DES LEADS DE QUALITÉ</div>
-              <div className={styles.heroTextSubTitle}>Notre Intelligence Artificielle déniche pour vous les meilleurs leads grâce à notre algorithme de scoring</div>
+              <text className={styles.heroTextTitle}>N&apos;ACHETEZ QUE DES LEADS DE QUALITÉ</text>
+              <text className={styles.heroTextSubTitle}>Notre Intelligence Artificielle déniche pour vous les meilleurs leads grâce à notre algorithme de scoring</text>
               <div className={styles.emailPart}>
                   <div className={styles.email}>email@example.com</div>
                   <div className={styles.joinButton}>Nous Rejoindre</div>
