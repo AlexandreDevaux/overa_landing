@@ -7,7 +7,11 @@ import Card from '../components/Card'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 
+
+
+
 const Home: NextPage = () => {
+
   return (
     <div>
       <Head>
