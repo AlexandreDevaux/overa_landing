@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     hotjar.initialize(process.env.HJID, process.env.HJSV)
   }, [])
   useEffect(() => {
-
     if (typeof window !== 'undefined') {
       console.log("init GTM")
       TagManager.initialize({ gtmId: process.env.GTM });
@@ -32,13 +31,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            gtag('config', '${process.env.GID}', {
             page_path: window.location.pathname,
             });
         `}
     </Script>
     <Component {...pageProps} />
-    
     </>
     
   )
