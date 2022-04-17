@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     hotjar.initialize(process.env.HJID, process.env.HJSV)
   }, [])
-
   return <Component {...pageProps} />
 }
 
