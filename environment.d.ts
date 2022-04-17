@@ -3,8 +3,9 @@ declare global {
       interface ProcessEnv {
         HJID: integer;
         HJSV: integer;
-        GID: string;
+        GADS: string;
         GTM: string;
+        GA: string;
       }
     }
   }

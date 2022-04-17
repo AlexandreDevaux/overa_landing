@@ -4,8 +4,9 @@ const nextConfig = {
   env:{
     HJID: process.env.HJID,
     HJSV: process.env.HJSV,
-    GID: process.env.GID,
+    GADS: process.env.GADS,
     GTM: process.env.GTM,
+    GA: process.env.GA
   }
 }
 

@@ -24,14 +24,26 @@ function MyApp({ Component, pageProps }: AppProps) {
 }, [])
   return (
     <>
-    <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GID}`} />
+    <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GADS}`} />
+
+    <Script id="UA-XXXXXX" strategy="lazyOnload">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GADS}', {
+            page_path: window.location.pathname,
+            });
+        `}
+    </Script>
+    <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA}`} />
 
     <Script id="G-XXXXXX" strategy="lazyOnload">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.GID}', {
+            gtag('config', '${process.env.GA}', {
             page_path: window.location.pathname,
             });
         `}
