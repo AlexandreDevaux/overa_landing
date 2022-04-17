@@ -4,6 +4,7 @@ declare global {
         HJID: integer;
         HJSV: integer;
         GID: string;
+        GTM: string;
       }
     }
   }
