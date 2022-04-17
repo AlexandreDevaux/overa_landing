@@ -207,6 +207,11 @@
     /* border: 1px solid red; */
     text-align: center;
   }
+  .email {
+    margin-right: 0;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
 }
 
 @media (min-width: 1500px) {
