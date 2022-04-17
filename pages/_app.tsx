@@ -9,6 +9,7 @@ import TagManager from 'react-gtm-module'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log(process.env.GID)
   useEffect(() => {
     hotjar.initialize(process.env.HJID, process.env.HJSV)
   }, [])
@@ -16,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     if (typeof window !== 'undefined') {
       console.log("init GTM")
-      TagManager.initialize({ gtmId: process.env.GID });
+      TagManager.initialize({ gtmId: 'G-'+ process.env.GID });
     }else {
       console.log("GTM server side - ignorning")
     }
