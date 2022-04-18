@@ -275,6 +275,10 @@
     align-items: center;
   }
 
+  .formCompletedText {
+    font-size: 1rem;
+  }
+
 }
 
 
