@@ -6,6 +6,9 @@ declare global {
         GADS: string;
         GTM: string;
         GA: string;
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: string;
+        GOOGLE_PRIVATE_KEY: string;
+        GSHEET_ID: string;
       }
     }
   }
