@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import Form from '../components/Form'
 
 const Header = () => {
   return (
@@ -11,7 +12,6 @@ const Header = () => {
               </div>
               <div className={styles.overa}>OVERA</div>
           </div>
-          <div className={styles.joinButton}>Nous Rejoindre</div>
       </div>
   )
 }
