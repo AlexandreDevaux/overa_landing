@@ -25,7 +25,6 @@ async function saveEmail(email: string) {
     // TODO: what to do here?
     console.log("Got email: " + email)
 
-    console.log(process.env.GOOGLE_PRIVATE_KEY)
     const auth = new google.auth.GoogleAuth({
         credentials: {
             client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
