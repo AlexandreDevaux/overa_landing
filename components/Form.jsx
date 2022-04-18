@@ -10,7 +10,15 @@ function Form() {
     const submit = async (e) => {
         // We will submit the form ourselves
         e.preventDefault()
-
+        let response = await fetch("/api/waitlist", {
+            method: "POST",
+            body: JSON.stringify({email: email})
+        })
+        if (response.ok) {
+            setHasSubmitted(true);
+        } else {
+            setError(await response.text())
+        }
         // TODO: make a POST request to our backend
     }
 
@@ -18,8 +26,8 @@ function Form() {
     //   display a thank you message
     if (hasSubmitted) {
         return <div className={styles.formWrapper}>
-            <span className={styles.subtitle}>
-                Thanks for signing up! We will be in touch soon.
+            <span className={styles.formCompletedText}>
+                Thanks for signing up to our Waitlist! We will be in touch soon.
             </span>
         </div>
     }
