@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import Form from '../components/Form'
 
 const Hero = () => {
   return (
@@ -9,8 +10,7 @@ const Hero = () => {
               <div className={styles.heroTextTitle}>N&apos;ACHETEZ QUE DES LEADS DE QUALITÉ</div >
               <div className={styles.heroTextSubTitle}>Notre Intelligence Artificielle déniche pour vous les meilleurs leads grâce à notre algorithme de scoring</div >
               <div className={styles.emailPart}>
-                  <div className={styles.email}>email@example.com</div>
-                  <div className={styles.joinButton}>Nous Rejoindre</div>
+                  <Form />
               </div>
           </div>
 
