@@ -1,7 +1,15 @@
 import validator from "email-validator"
 import { google } from 'googleapis';
 
+const auth = new google.auth.GoogleAuth({
+    credentials: {
+        client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+        private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    },
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+});
 
+const sheets = google.sheets({ version: 'v4', auth });
 
 
 
@@ -25,15 +33,7 @@ async function saveEmail(email: string) {
     // TODO: what to do here?
     console.log("Got email: " + email)
 
-    const auth = new google.auth.GoogleAuth({
-        credentials: {
-            client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-            private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-        },
-        scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
 
-    const sheets = google.sheets({ version: 'v4', auth });
     const response = await sheets.spreadsheets.values.append({
         spreadsheetId: process.env.GSHEET_ID,
         range: 'Sheet1!A:A',
