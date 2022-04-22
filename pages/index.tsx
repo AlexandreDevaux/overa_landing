@@ -15,8 +15,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Overa Landing Page</title>
-        <meta name="Overa Landing Page" content="This page is the landing page of Overa" />
+        <title>Overa</title>
+        <meta name="Overa Landing Page" content="N'ACHETEZ QUE DES LEADS DE QUALITÉ. Notre Intelligence Artificielle déniche pour vous les meilleurs leads grâce à notre algorithme de scoring." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
