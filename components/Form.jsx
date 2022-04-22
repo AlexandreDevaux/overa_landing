@@ -6,14 +6,17 @@ function Form() {
     const [email, setEmail] = useState("");
     const [hasSubmitted, setHasSubmitted] = useState(false);
     const [error, setError] = useState(null);
+    const [pending, setPending] = useState(null);
 
     const submit = async (e) => {
         // We will submit the form ourselves
         e.preventDefault()
+        setPending(true)
         let response = await fetch("/api/waitlist", {
             method: "POST",
             body: JSON.stringify({email: email})
         })
+        setPending(false)
         if (response.ok) {
             setHasSubmitted(true);
         } else {
@@ -28,6 +31,13 @@ function Form() {
         return <div className={styles.formWrapper}>
             <span className={styles.formCompletedText}>
                 Thanks for signing up to our Waitlist! We will be in touch soon.
+            </span>
+        </div>
+    }
+    if (pending) {
+        return <div className={styles.formWrapper}>
+            <span className={styles.formPendingText}>
+                Pending...
             </span>
         </div>
     }
