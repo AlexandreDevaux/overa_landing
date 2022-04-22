@@ -136,6 +136,17 @@
   border-radius: 10px;
 }
 
+.formPendingText {
+  background-color: rgba(216, 216, 216, 0.5);
+  font-size: 1.5rem;
+  color: white;
+  border: solid 1px white;
+  text-align: center;
+  padding: 3%;
+  width: 100%;
+  border-radius: 10px;
+}
+
 .error {
   color: red;
 }
